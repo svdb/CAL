@@ -1,0 +1,21 @@
+﻿#picasaAlbum .image {
+	position: relative;
+	float: left; /* optional */
+	margin: 5px;
+}
+#picasaAlbum .image .text {
+	position: absolute;
+	top: 106px; /* in conjunction with left property, decides the text position */
+	left: 0px;
+	width: 160px; /* optional, though better have one */
+	color: white;
+	background: rgb(0, 0, 0); /* fallback color */
+	background: rgba(0, 0, 0, 0.7);
+	height: 54px;
+	font-size: 12px;
+}
+#picasaAlbum .image .text span {
+	margin-left: 5px;
+	margin-top: 3px;
+	display: block;
+}
