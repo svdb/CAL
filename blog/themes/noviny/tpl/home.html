@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html itemscope itemtype="http://schema.org/Blog">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="MSSmartTagsPreventParsing" content="TRUE" />
+  <meta name="ROBOTS" content="{{tpl:BlogMetaRobots}}" />
+
+  <title>{{tpl:BlogName encode_html="1"}}</title>
+
+	<meta name="description" content="CreativeActionLinks helps children from Tohoku, Japan, recover from the March 11 2011 earth quake and tsunami.">
+	<meta name="keywords" content="CreativeActionLinks, Creative Action Links, CAL, Japan, Tohoku, Sendai, Miyagi, Iwate, Fukushima, tsunami, earth, quake, nuclear, power, plant, disaster, relief, non-profit, organisation, foundation, volunteer, school, victims, support, social, activities, culture, solidarity, kids, family, families, need, Sendai, Cultural, Foundation">
+	<meta name="author" content="CreativeActionLinks">
+	<meta name="Copyright" content="Copyright (C) CreativeActionLinks.org">
+	<meta http-equiv="imagetoolbar" content="no">
+	<!-- micro data -->
+	<meta itemprop="name" content="Creative Action Links">
+	<meta itemprop="description" content="CreativeActionLinks helps children from Tohoku, Japan, recover from the March 11 2011 earth quake and tsunami.">
+	<meta itemprop="image" content="http://netdna.creativeactivelinks.org/img/CreativeActionLinksLogo.gif">
+	<!-- FB tags -->
+	<meta property="og:title" content="Creative Action Links" />
+	<meta property="og:type" content="non_profit" />
+	<meta property="og:url" content="http://www.creativeactionlinks.org/blog/" />
+	<meta property="og:image" content="http://netdna.creativeactivelinks.org/img/CreativeActionLinksLogo.gif" />
+	<meta property="og:site_name" content="Creative Action Links" />
+
+  <!-- meta name="description" lang="{{tpl:BlogLanguage}}" content="{{tpl:BlogDescription cut_string="180" encode_html="1"}}" / -->
+  <!-- meta name="copyright" content="{{tpl:BlogCopyrightNotice encode_html="1"}}" / -->
+  <!-- meta name="author" content="{{tpl:BlogEditor encode_html="1"}}" / -->
+  <meta name="date" scheme="W3CDTF" content="{{tpl:BlogUpdateDate iso8601="1"}}" />
+
+  <link rel="schema.dc" href="http://purl.org/dc/elements/1.1/" />
+  <meta name="dc.title" lang="{{tpl:BlogLanguage}}" content="{{tpl:BlogName encode_html="1"}}<tpl:PaginationIf start="0"> - {{tpl:lang page}} {{tpl:PaginationCurrent}}</tpl:PaginationIf>" />
+  <meta name="dc.description" lang="{{tpl:BlogLanguage}}" content="{{tpl:BlogDescription encode_html="1"}}" />
+  <meta name="dc.language" content="{{tpl:BlogLanguage}}" />
+  <meta name="dc.publisher" content="{{tpl:BlogEditor encode_html="1"}}" />
+  <meta name="dc.rights" content="{{tpl:BlogCopyrightNotice encode_html="1"}}" />
+  <meta name="dc.date" scheme="W3CDTF" content="{{tpl:BlogUpdateDate iso8601="1"}}" />
+  <meta name="dc.type" content="text" />
+  <meta name="dc.format" content="text/html" />
+
+  <!-- Mobile viewport optimized: h5bp.com/viewport -->
+  <meta name="viewport" content="width=device-width">
+
+  <link rel="contents" title="{{tpl:lang Archives}}" href="{{tpl:BlogArchiveURL}}" />
+  <tpl:Categories>
+  <link rel="section" href="{{tpl:CategoryURL}}" title="{{tpl:CategoryTitle encode_html="1"}}" />
+  </tpl:Categories>
+
+  <tpl:Entries no_content="1">
+    <link rel="chapter" href="{{tpl:EntryURL}}" title="{{tpl:EntryTitle encode_html="1"}}" />
+  </tpl:Entries>
+
+  <link rel="alternate" type="application/atom+xml" title="Atom 1.0" href="{{tpl:BlogFeedURL type="atom"}}" />
+  <link rel="EditURI" type="application/rsd+xml" title="RSD" href="{{tpl:BlogRSDURL}}" />
+  <link rel="meta" type="application/xbel+xml" title="Blogroll" href="{{tpl:BlogrollXbelLink}}" />
+
+  {{tpl:include src="_head.html"}}
+</head>
+
+<body class="dc-home">
+<div id="fb-root"></div>
+
+<div id="page">
+
+{{tpl:include src="_top.html"}}
+
+<div id="wrapper">
+
+<div id="main">
+  <div id="content">
+
+    <div class="grid">
+      <!-- # lead : First category last post -->
+      <div id="lead" class="grid-l home-lead">
+        <tpl:Categories>
+          <tpl:LoopPosition start="1" length="1">
+            <tpl:Entries lastn="1">
+              {{tpl:EntryFirstImage size="s" class="front" with_category="1"}}
+              <div class="block">
+              <p class="category-title"><a href="{{tpl:CategoryURL}}">{{tpl:CategoryTitle encode_html="1"}}</a></p>
+              <h2><a href="{{tpl:EntryURL}}">{{tpl:EntryTitle encode_html="1"}}</a></h2>
+              <!-- # Entry with an excerpt -->
+              <tpl:EntryIf extended="1">
+                <div class="b post-content">{{tpl:EntryExcerpt}}</div>
+              </tpl:EntryIf>
+              <!-- # Entry without excerpt -->
+              <tpl:EntryIf extended="0">
+                <div class="b post-content"><p>{{tpl:EntryContent encode_html="1" remove_html="1" cut_string="500"}}</p></div>
+              </tpl:EntryIf>
+              <p class="read-it"><a href="{{tpl:EntryURL}}" title="{{tpl:lang Continue reading}} {{tpl:EntryTitle encode_html="1"}}">{{tpl:lang Continue reading}}</a>
+                <tpl:EntryIf operator="or" show_comments="1" show_pings="1">
+                <span class="comment-count"><span> | {{tpl:lang Comments:}}</span>
+                  <a href="{{tpl:EntryURL}}#comments" title="{{tpl:EntryCommentCount count_all="1"}}">{{tpl:EntryCommentCount count_all="1" none="%s" one="%s" more="%s"}}</a></span>
+                </tpl:EntryIf>
+              </p>
+              </div>
+            </tpl:Entries>
+          </tpl:LoopPosition>
+        </tpl:Categories>
+      </div>
+
+      <!-- # meta -->
+      <div id="meta" class="grid-s">
+        <tpl:Entries lastn="1">
+          <div class="last-update">{{tpl:lang Last update:}} <strong>{{tpl:EntryDate}}</strong></div>
+        </tpl:Entries>
+        <div>
+	        <div class="social"><div class="g-plusone" data-size="tall"></div></div>
+					<div class="social" style="top:1px;" id="linkedinShare">
+						<script type="IN/Share" data-url="http://www.creativeactionlinks.org/blog/" data-counter="top"></script>
+					</div>
+					<div class="social" style="top:-1px; margin:0px;"><div class="fb-like" data-href="http://www.creativeactionlinks.org/blog/" data-send="false" data-layout="box_count" data-width="31" data-show-faces="false"></div></div>
+				</div>
+        {{tpl:include src="inc_meta.html"}}
+      </div>
+
+      <!-- # All other categories -->
+      <div id="overview" class="grid-l">
+        <tpl:Entries no_context="1" lastn="0"><tpl:EntryIf on_home_page="1"><div class="block">
+	          <div>
+	            {{tpl:EntryFirstImage size="sq" class="front" with_category="1"}}
+	            <p class="category-title">
+	            	<tpl:EntryIf is_new="1">
+	            		<div class="newNews">New!</div> &nbsp;
+	              </tpl:EntryIf>
+	            	<a href="{{tpl:EntryCategoryURL}}">{{tpl:EntryCategory encode_html="1"}}</a>
+	           	</p>
+	            <h2 class="post-title"><a href="{{tpl:EntryURL}}">{{tpl:EntryTitle encode_html="1"}}</a></h2>
+	              <!-- # Entry with an excerpt -->
+	              <tpl:EntryIf extended="1">
+	                <div class="b post-content">{{tpl:EntryExcerpt}}</div>
+	              </tpl:EntryIf>
+	              <!-- # Entry without excerpt -->
+	              <tpl:EntryIf extended="0">
+	                <div class="b post-content"><p>{{tpl:EntryContent encode_html="1" remove_html="1" cut_string="250"}}</p></div>
+	              </tpl:EntryIf>
+	              <p class="read-it"><a href="{{tpl:EntryURL}}" title="{{tpl:lang Continue reading}} {{tpl:EntryTitle encode_html="1"}}">{{tpl:lang Continue reading}}</a>
+	                <tpl:EntryIf operator="or" show_comments="1" show_pings="1">
+	                <span class="comment-count"><span> | {{tpl:lang Comments:}}</span>
+	                  <a href="{{tpl:EntryURL}}#comments" title="{{tpl:EntryCommentCount count_all="1"}}">{{tpl:EntryCommentCount count_all="1" none="%s" one="%s" more="%s"}}</a></span>
+	                </tpl:EntryIf>
+	              </p>
+	          </div>
+	        </div></tpl:EntryIf></tpl:Entries>
+      </div>
+
+      <!-- # extra -->
+      <div id="extra" class="grid-s widgets">
+        {{tpl:include src="inc_extra.html"}}
+        {{tpl:Widgets type="nav"}}
+      </div>
+    </div>
+
+  </div>
+</div> <!-- End #main -->
+
+</div> <!-- End #wrapper -->
+
+{{tpl:include src="_footer.html"}}
+</div> <!-- End #page -->
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    if ($.browser.msie) {
+      var ver = parseInt($.browser.version, 10);
+      var msg = '<div style="font-size:14px"><div>Your browser is MS Internet Explorer ' + ver +
+        '<br>For a better viewing experience we recommend using one of the following free browsers:'+
+        '<br>' + decodeURIComponent('%e4%b8%8b%e8%a8%98%e3%81%ae%e3%81%86%e3%81%a1%e3%81%ae%e3%81%84%e3%81%9a%e3%82%8c%e3%81%8b%e3%81%ae%e7%84%a1%e6%96%99%e3%83%96%e3%83%a9%e3%82%a6%e3%82%b6%e3%82%92%e3%81%8a%e4%bd%bf%e3%81%84%e3%81%ab%e3%81%aa%e3%82%8a%e3%81%be%e3%81%99%e3%81%a8%e3%82%88%e3%82%8a%e5%bf%ab%e9%81%a9%e3%81%ab%e3%82%b5%e3%82%a4%e3%83%88%e3%82%92%e3%81%94%e8%a6%a7%e3%81%ab%e3%81%aa%e3%82%8b%e3%81%93%e3%81%a8%e3%81%8c%e3%81%a7%e3%81%8d%e3%81%be%e3%81%99%e3%80%82') + ' :</div>'+
+        '<div style="height:66px;">'+
+        '<a href="//www.google.com/chrome" target="_blank"><img alt="Chrome" src="/img/chrome_logo.gif" style="vertical-align: middle;" height="40" width="123"></a> '+
+        '<a href="http://www.mozilla.org/" target="_blank"><img alt="FireFox" src="/img/FirefoxLogo.png" style="vertical-align: middle;" height="41" width="110"></a> '+
+        '<a href="http://www.apple.com/safari/download/" target="_blank"><img alt="Safari" src="/img/SafariLogo.png" style="vertical-align: middle;" height="41" width="101"></a>'+
+        '<a href="http://www.opera.com/download/" target="_blank"><img alt="Opera" src="/img/OperaLogo.png" style="vertical-align: middle;" height="41" width="106"></a>'+
+        '</div></div>';
+      $(msg).insertBefore('#lead');
+    }
+  });
+</script>
+<script>
+// google
+window.___gcfg = {lang: 'ja'};
+(function() {
+  var po = document.createElement('script');
+  po.type = 'text/javascript';
+  po.async = true;
+  po.src = 'https://apis.google.com/js/plusone.js';
+  var s = document.getElementsByTagName('script')[0];
+  s.parentNode.insertBefore(po, s);
+})();
+// FB
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  //js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  js.src = "//connect.facebook.net/ja_JP/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+// linkedin
+(function() {
+  var po = document.createElement('script');
+  po.type = 'text/javascript';
+  po.async = true;
+  po.src = '//platform.linkedin.com/in.js';
+  //var s = document.getElementById('linkedinShare');
+  var s = document.getElementsByTagName('body')[0];
+  s.parentNode.appendChild(po);
+})();
+
+</script>
+</body>
+</html>
