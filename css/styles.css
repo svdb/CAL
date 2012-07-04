@@ -1,0 +1,219 @@
+@charset "utf-8";
+body {
+	font-family: "Trebuchet MS", Verdana, Arial, Georgia, Helvetica, sans-serif;
+	background-color: #666;
+}
+ul {
+	margin-top: 0px;
+}
+img {
+	border: 0 none;
+}
+.corners {
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+}
+.shadow {
+	-moz-box-shadow: 5px 5px 10px #333;
+	-webkit-box-shadow: 5px 5px 10px #333;
+	box-shadow: 5px 5px 10px #333;
+	/* IE8 */
+	-ms-filter:"progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#333333')";
+	/* IE7 */
+	-ms-filter:progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#333333');
+}
+.page {
+	width: 900px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+.header {
+	background-color: #999;
+	display: block;
+	width: 700px;
+  height: 27px;
+	margin-left: 130px;
+	padding-left: 30px;
+	padding-right: 30px;
+	margin-bottom: 10px;
+	vertical-align:middle;
+}
+.box {
+	background-color:#FFF;
+	border:#CCC 1px solid;
+	display: block;
+	width: 700px;
+	margin-left: 130px;
+	padding: 20px;
+	padding-left: 30px;
+	padding-right: 30px;
+	margin-bottom: 15px;
+}
+.header img {
+	m-argin-top: 5px;
+}
+.bestview {
+  margin: 2px 0 0;
+  padding:0px;
+  float: right;
+}
+.flags {
+  margin:0px;
+  padding:0px;
+}
+.footer{
+	font-size: .8em;
+}
+.notice {
+	border:#FC0 2px dashed;
+	background-color: #FFC; 
+	padding:5px;
+}
+.album {
+	height: 700px;
+	width: 120px;
+	float: left;
+	background-color: #999;
+	o_verflow: hidden;
+	p_adding: 10px;
+}
+.albumView {
+	height:685px; 
+	width:102px; 
+	margin-left:auto; 
+	margin-right:auto; 
+	overflow:hidden;
+	margin-top:10px;
+}
+.glass {
+	width: 100%;
+	height: 100%;
+}
+.photoframe {
+	width:100px;
+	height:100px;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top: 16px;
+	background-repeat:no-repeat;
+	background-position:center;
+	text-align:center;
+}
+.mainContent {
+  padding-bottom: 10px;
+}
+.highslide-gallery div.bulk {
+	display:inline-block;
+	margin: 4px;
+	margin-right: 4px;
+	margin-bottom: 4px;
+}
+#twitter {
+	margin-top: 10px;
+  position: relative;
+  width: 100%;
+  height: 37px;
+  overflow: hidden;
+	border:#CCC 1px solid;
+	font-size: 0.8em;
+}
+#twitter a.link {
+    position: absolute;
+	float:right;
+    right: 0;
+    top: 0;
+    display: block;
+    width: 160px;
+    height: 27px;
+	margin-top: 5px;
+	margin-right: 4px;
+    text-indent: -5000px;
+    background: url(http://twitter-badges.s3.amazonaws.com/follow_us-c.png) left top no-repeat;
+    z-index: 200;
+}
+#twitter ul {
+	padding-left: 3px !important;
+	margin-right: 170px;
+	list-style: none;
+}
+#twitter_update_list {
+	position: absolute;
+	l-eft: 30px;
+	t-op: 34px;
+	display: block;
+	w-idth: 1000px;
+	height: 300px;
+	overflow: hidden;
+	z-index: 100;
+}
+.sticky {
+  display:none;
+  position:absolute;
+  left: 100px;
+  top: 100px;
+  width:170px;
+  background-image:url(http://netdna.creativeactivelinks.org/img/stickynote-large.png);
+  background-position:top left;
+  background-repeat:no-repeat;
+  padding-left:28px;
+  padding-right: 40px;
+  padding-bottom:55px;
+  font-size:12px;
+  z-index:20000 !important;
+  cursor:default;
+}
+.stickyClose {
+  background-image:url(http://netdna.creativeactivelinks.org/img/close.png);
+  background-position:0 0;
+  background-repeat:no-repeat;
+  height: 30px;
+  widows:30px;
+  position:relative;
+  top:-8px;
+  left:-36px;
+  cursor:pointer;
+}
+.stickyClose:hover {
+  background-position:0 -30px;
+}
+
+#navLinks a:link {
+  text-decoration: none;
+}
+#navLinks a:visited {
+  text-decoration: none;
+}
+#navLinks a:hover {
+  text-decoration: underline;
+}
+.iconCollapsed {
+  background: url(http://netdna.creativeactivelinks.org/img/collapseExpand.jpg) 0 0;
+  background-repeat: no-repeat;
+  width: 25px;
+  height: 24px;
+  cursor: pointer;
+}
+.iconExpanded {
+  background-position: -28px 0;
+}
+#eventsContent table {
+  width: 100%;
+}
+.eventTitle {
+  width: 100%;
+}
+.eventTitle h3 {
+  cursor: pointer;
+}
+.eventDate {
+  font-size: .9em;
+  white-space: nowrap;
+}
+.eventContentCollapsed {
+  display: none;
+}
+.eventContentExpanded {
+  display: block;
+}
