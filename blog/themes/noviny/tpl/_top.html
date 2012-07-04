@@ -1,0 +1,26 @@
+<div id="top-wrapper">
+<div id="top">
+
+  <a href="{{tpl:BlogURL}}" class="offSite"><h1 id="titre-blog"><span>Heart Japan</span>
+  	<span class="longtxt">We want to <em>know</em>, We want to <em>think</em>, We want to <em>act</em>, We want to <em>dream</em>,<br>In our daily lives. In rainy days as in shiny days.</span>
+  </h1></a>
+  <!-- h1><span><a href="{{tpl:BlogURL}}">{{tpl:BlogName encode_html="1"}}</a></span></h1 -->
+
+  <p id="blogdesc">{{tpl:BlogDescription encode_html="1"}}</p>
+  
+  <p id="prelude"><a href="#main">{{tpl:lang To content}}</a> |
+  <a href="#sidebar">{{tpl:lang To menu}}</a> |
+  <a href="#search">{{tpl:lang To search}}</a></p>
+  
+  <!-- # --BEHAVIOR-- publicTopAfterContent -->
+  {{tpl:SysBehavior behavior="publicTopAfterContent"}}
+  
+  <form id="search" action="{{tpl:BlogURL}}" method="get"><div>
+  <span class="search-l"></span><input
+  type="text" id="q" name="q" class="search-field" maxlength="255" size="20"
+  value="{{tpl:SysSearchString encode_html="1"}}" title="{{tpl:lang Search}}" /><span class="search-r"></span>
+  </div></form>
+  
+  <div id="nav">{{tpl:NovinyMenu}}</div>
+</div>
+</div>
