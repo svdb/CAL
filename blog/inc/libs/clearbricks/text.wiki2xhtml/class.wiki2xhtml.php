@@ -904,10 +904,9 @@ class wiki2xhtml
 			if ($this->getOpt('active_antispam') && preg_match('/^mailto:/',$url)) {
 				$content = $content == $url ? preg_replace('%^mailto:%','',$content) : $content;
 				$url = 'mailto:'.$this->__antiSpam(substr($url,7));
-
 			}
 
-			$attr = ' href="'.$this->protectAttr($this->protectUrls($url)).'"';
+			$attr = ' target="_blank" href="'.$this->protectAttr($this->protectUrls($url)).'"';
 			$attr .= ($lang) ? ' hreflang="'.$lang.'"' : '';
 			$attr .= ($title) ? ' title="'.$this->protectAttr($title).'"' : '';
 
