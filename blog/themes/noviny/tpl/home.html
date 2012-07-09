@@ -40,7 +40,7 @@
   <meta name="dc.format" content="text/html" />
 
   <!-- Mobile viewport optimized: h5bp.com/viewport -->
-  <meta name="viewport" content="width=device-width">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 
   <link rel="contents" title="{{tpl:lang Archives}}" href="{{tpl:BlogArchiveURL}}" />
   <tpl:Categories>
@@ -100,21 +100,6 @@
         </tpl:Categories>
       </div>
 
-      <!-- # meta -->
-      <div id="meta" class="grid-s">
-        <tpl:Entries lastn="1">
-          <div class="last-update">{{tpl:lang Last update:}} <strong>{{tpl:EntryDate}}</strong></div>
-        </tpl:Entries>
-        <div>
-	        <div class="social"><div class="g-plusone" data-size="tall"></div></div>
-					<div class="social" style="top:1px;" id="linkedinShare">
-						<script type="IN/Share" data-url="http://www.creativeactionlinks.org/blog/" data-counter="top"></script>
-					</div>
-					<div class="social" style="top:-1px; margin:0px;"><div class="fb-like" data-href="http://www.creativeactionlinks.org/blog/" data-send="false" data-layout="box_count" data-width="31" data-show-faces="false"></div></div>
-				</div>
-        {{tpl:include src="inc_meta.html"}}
-      </div>
-
       <!-- # All other categories -->
       <div id="overview" class="grid-l">
         <tpl:Entries no_context="1" lastn="0"><tpl:EntryIf on_home_page="1"><div class="block">
@@ -143,6 +128,23 @@
 	              </p>
 	          </div>
 	        </div></tpl:EntryIf></tpl:Entries>
+      </div>
+
+			<div class="grid-l separator"></div>
+
+      <!-- # meta -->
+      <div id="meta" class="grid-s">
+        <tpl:Entries lastn="1">
+          <div class="last-update">{{tpl:lang Last update:}} <strong>{{tpl:EntryDate}}</strong></div>
+        </tpl:Entries>
+        <div>
+	        <div class="social"><div class="g-plusone" data-size="tall"></div></div>
+					<div class="social" style="top:1px;" id="linkedinShare">
+						<script type="IN/Share" data-url="http://www.creativeactionlinks.org/blog/" data-counter="top"></script>
+					</div>
+					<div class="social" style="top:-1px; margin:0px;"><div class="fb-like" data-href="http://www.creativeactionlinks.org/blog/" data-send="false" data-layout="box_count" data-width="31" data-show-faces="false"></div></div>
+				</div>
+        {{tpl:include src="inc_meta.html"}}
       </div>
 
       <!-- # extra -->
