@@ -1489,6 +1489,12 @@ and (max-width : 320px) {
 
 	div.grid div.grid-l {
 		float: none;
+		width: auto;
+	}
+
+	body.dc-post #lead h2 {
+		font-size: 22px;
+		margin-left: 15px;
 	}
 
 	#overview {
@@ -1560,6 +1566,21 @@ and (max-width : 320px) {
 
 	#footer p {
 		margin-left: 5px;
+	}
+
+	div.post.post-excerpt {
+	  margin-left: 10px;
+	  width: auto;
+	}
+
+	div.post {
+	  margin-left: 10px;
+	  width: auto;
+	}
+
+	div.post p {
+		margin: 0;
+	  width: auto;
 	}
 
 }
