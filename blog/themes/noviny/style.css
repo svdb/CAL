@@ -1421,28 +1421,18 @@ a.jScrollActiveArrowButton, a.jScrollActiveArrowButton:hover {
   border-top: 1px solid #E3E3E3;
 }
 
-/* Smartphones (portrait and landscape) ----------- */
-@media only screen
-and (min-device-width : 320px)
-and (max-device-width : 480px) {
-/* Styles */
+/* Smartphones (portrait and landscape) -----------
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
 }
+*/
 
 /* Smartphones (landscape) ----------- */
-@media only screen
-and (min-width : 321px) {
-/* Styles */
-}
-
-/* Smartphones (portrait) ----------- */
-@media only screen
-and (max-width : 320px) {
+@media only screen and (max-width: 480px), only screen and (max-device-width: 480px) {
 	#top {
-		b-ackground-size: 70px;
-		background: transparent url(/img/CreativeActionLinksLogo-S.gif) no-repeat top right;
+		background: transparent url(/img/CreativeActionLinksLogo-M.gif) no-repeat top right;
 		padding-left: 5px;
 		height: auto;
-	}
+}
 
 	#titre-blog {
 		font-size: 36px;
@@ -1500,11 +1490,11 @@ and (max-width : 320px) {
 	#overview {
 		width: 100%;
 		margin-left: 0;
-		background: none;
+		background-position-x: 215px;
 	}
 
 	#overview div.block {
-	  width: auto;
+	  width: 195px;
 	}
 
 	#overview p.category-title {
@@ -1516,15 +1506,15 @@ and (max-width : 320px) {
 	}
 
 	#panel div.widgets div.links {
-	  width: 270px;
-	  -webkit-column-count: auto;
-	  -webkit-column-gap: normal;
-	  -moz-column-count: auto;
-	  -moz-column-gap: normal;
-	  -o-column-count: auto;
-	  -o-column-gap: normal;
-	  column-count: auto;
-	  column-gap: normal;
+	  width: 420px;
+	  -webkit-column-count: 2;
+	  -webkit-column-gap: 50px;
+	  -moz-column-count: 2;
+	  -moz-column-gap: 50px;
+	  -o-column-count: 2;
+	  -o-column-gap: 50px;
+	  column-count: 2;
+	  column-gap: 50px;
 	  height: auto;
 	  margin: 0;
 	  padding-left: 8px;
@@ -1591,7 +1581,33 @@ and (max-width : 320px) {
 		background: none;
 		border-bottom: solid 1px #DF2FDF;
 	}
+}
 
+/* Smartphones (portrait) ----------- only need to diff compared to max 480px */
+@media only screen and (max-width: 320px), only screen and (max-device-width: 320px) {
+	#top {
+		background: transparent url(/img/CreativeActionLinksLogo-S.gif) no-repeat top right;
+	}
+
+	#overview {
+		background: none;
+	}
+
+	#overview div.block {
+	  width: auto;
+	}
+
+	#panel div.widgets div.links {
+	  width: 270px;
+	  -webkit-column-count: auto;
+	  -webkit-column-gap: normal;
+	  -moz-column-count: auto;
+	  -moz-column-gap: normal;
+	  -o-column-count: auto;
+	  -o-column-gap: normal;
+	  column-count: auto;
+	  column-gap: normal;
+	}
 }
 
 /* iPads (portrait and landscape) ----------- */
