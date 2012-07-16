@@ -1422,24 +1422,51 @@ a.jScrollActiveArrowButton, a.jScrollActiveArrowButton:hover {
   border-top: 1px solid #E3E3E3;
 }
 
-/* Desktops and laptops ----------- */
-@media only screen and (min-width: 769px), only screen and (min-device-width: 769px) {
+/* Desktops and laptops -----------
+@media only screen and (min-width: 1024px), only screen and (min-device-width: 1024px) { */
+  #main, #panel, #framafoot {
+    width: 960px;
+  }
   #top {
     width: 940px;
   }
-  #main {
-    width: 960px;
+  div.grid div.grid-s {
+    float: right;
+    position: relative;
+    top: -150px;
   }
-  #panel {
-    width: 960px;
+  #lead.home-lead {
+    width: 690px;
   }
-  #framafoot {
+  #overview div.block {
+    width: 210px;
+  }
+  #overview {
+    background: transparent url(img/overview-bg-230.png) repeat-y top right;
+    background-position-x: 225px;
+  }
+
+
+/* Desktops and laptops ----------- */
+/* @media only screen and (min-width: 769px) and (max-width: 1023px), only screen and (min-device-width: 769px) and (max-device-width: 1023px) { */
+@media only screen and (max-width: 1024px), only screen and (max-device-width: 1024px) {
+  #top, #main, #panel, #framafoot {
     width: 960px;
   }
   div.grid div.grid-s {
     float: right;
     position: relative;
-    top: -210px;
+    top: -150px;
+  }
+  #lead.home-lead {
+    width: 100%;
+  }
+  #overview div.block {
+    width: 210px;
+  }
+  #overview {
+    background: transparent url(img/overview-bg-230.png) repeat-y top right;
+    background-position-x: 225px;
   }
 }
 
@@ -1486,11 +1513,6 @@ a.jScrollActiveArrowButton, a.jScrollActiveArrowButton:hover {
   }
 }
 
-/* Smartphones (portrait and landscape) -----------
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
-}
-*/
-
 @media only screen and (max-width: 640px), only screen and (max-device-width: 640px) {
   #top, #nav, #main, #panel, #framafoot, #panel div.widgets, #overview {
     width: 630px;
@@ -1505,7 +1527,7 @@ a.jScrollActiveArrowButton, a.jScrollActiveArrowButton:hover {
   }
 
   #lead.home-lead {
-    w-idth: 100%;
+    width: 100%;
   }
 
   .introTxt {
@@ -1586,6 +1608,7 @@ a.jScrollActiveArrowButton, a.jScrollActiveArrowButton:hover {
 
   #lead.home-lead {
     margin-left: 9px;
+    width: 98%;
   }
 
   #lead.home-lead img.front {
@@ -1704,24 +1727,27 @@ a.jScrollActiveArrowButton, a.jScrollActiveArrowButton:hover {
 }
 
 @media only screen and (max-width: 480px), only screen and (max-device-width: 480px) {
-  #top, #main, #panel, #framafoot, #panel div.widgets {
+  #top, #nav {
+    width: 98%;
+  }
+  #main, #panel, #framafoot, #panel div.widgets {
     width: 100%;
   }
 }
 
 /* Smartphones (portrait) ----------- only need to diff compared to max 480px */
 @media only screen and (max-width: 320px), only screen and (max-device-width: 320px) {
-  #top, #main, #panel, #framafoot, #panel div.widgets {
+  #top, #nav {
+    width: 98%;
+  }
+
+  #main, #panel, #framafoot, #panel div.widgets {
     width: 100%;
   }
 
   #top {
     background: transparent url(/img/CreativeActionLinksLogo-S.gif) no-repeat top right;
     background-size: initial;
-  }
-
-  #nav {
-    width: 100%;
   }
 
   #overview {
@@ -1760,33 +1786,10 @@ a.jScrollActiveArrowButton, a.jScrollActiveArrowButton:hover {
 
 }
 
-/* iPads (portrait and landscape) ----------- */
-@media only screen
-and (min-device-width : 768px)
-and (max-device-width : 1024px) {
-/* Styles */
-}
-
-/* iPads (landscape) ----------- */
-@media only screen and (min-width : 769px) and (max-width : 1120px) {
-  #main {
-    width: 960px;
-  }
-  #panel {
-    width: 960px;
-  }
-  #framafoot {
-    width: 960px;
-  }
-  div.grid div.grid-s {
-    float: right;
-  }
-}
-
-
 /* iPhone 4 ----------- */
+/*
 @media
 only screen and (-webkit-min-device-pixel-ratio : 1.5),
 only screen and (min-device-pixel-ratio : 1.5) {
-/* Styles */
 }
+*/
