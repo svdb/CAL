@@ -1421,248 +1421,8 @@ a.jScrollActiveArrowButton, a.jScrollActiveArrowButton:hover {
   border-top: 1px solid #E3E3E3;
 }
 
-/* Smartphones (portrait and landscape) -----------
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
-}
-*/
-
-/* Smartphones (landscape) ----------- */
-@media only screen and (max-width: 480px), only screen and (max-device-width: 480px) {
-	#top {
-		background: transparent url(/img/CreativeActionLinksLogo-M.gif) no-repeat top right;
-		padding-left: 5px;
-		height: auto;
-}
-
-	#titre-blog {
-		font-size: 36px;
-		font-family: sans-serif;
-		text-shadow: black 1px 1px 0px;
-		padding-top: 15px;
-	}
-
-	.introTxt {
-	   font-size: 12px;
-	   font-family: Verdana,sans-serif;
-	   margin-top: 20px;
-	}
-
-	#nav {
-	  margin-top: 5px;
-	}
-
-	#nav li {
-	  padding: 0;
-	}
-
-	#main {
-		width: 100%;
-	}
-
-	#content {
-		padding-top: 10px;
-		padding-left: 0;
-	}
-
-	#lead.home-lead {
-		width: 100%;
-		margin-left: 9px;
-	}
-
-	#lead.home-lead img.front {
-		display: none;
-	}
-
-	#lead.home-lead div.block {
-		padding: 10px 20px 10px 10px;
-	}
-
-	div.grid div.grid-l {
-		float: none;
-		width: auto;
-	}
-
-	body.dc-post #lead h2 {
-		font-size: 22px;
-		margin-left: 15px;
-	}
-
-	#overview {
-		width: 100%;
-		margin-left: 0;
-		background-position-x: 215px;
-	}
-
-	#overview div.block {
-	  width: 195px;
-	}
-
-	#overview p.category-title {
-		display: none;
-	}
-
-	.separator {
-		width: 100%;
-	}
-
-	#panel div.widgets div.links {
-	  width: 420px;
-	  -webkit-column-count: 2;
-	  -webkit-column-gap: 50px;
-	  -moz-column-count: 2;
-	  -moz-column-gap: 50px;
-	  -o-column-count: 2;
-	  -o-column-gap: 50px;
-	  column-count: 2;
-	  column-gap: 50px;
-	  height: auto;
-	  margin: 0;
-	  padding-left: 8px;
-	}
-
-	#panel {
-		width: 100%;
-	}
-
-	#panel div.widgets {
-		width: 100%;
-		margin: 0;
-	}
-
-	div.widgets ul {
-		margin-left: 5px;
-	}
-
-	#meta {
-		padding-left: 15px;
-	}
-
-	#meta div.last-update {
-		display: none;
-	}
-
-	div.grid div.grid-s {
-		width: 100%;
-	}
-
-	.links ul {
-		-w-ebkit-margin-after: 0;
-	}
-
-	#footer {
-		width: 100%;
-		text-align: inherit;
-	}
-
-	#footer p {
-		margin-left: 5px;
-	}
-
-	div.post.post-excerpt {
-	  margin-left: 10px;
-	  width: auto;
-	}
-
-	div.post {
-	  margin-left: 10px;
-	  width: auto;
-	}
-
-	div.post p {
-		margin: 0;
-	  width: auto;
-	}
-
-	h2.post-title, #lead h2 {
-		margin-left: 10px;
-	}
-
-	#nav li.nav-active {
-		background: none;
-		border-bottom: solid 1px #DF2FDF;
-	}
-}
-
-/* Smartphones (portrait) ----------- only need to diff compared to max 480px */
-@media only screen and (max-width: 320px), only screen and (max-device-width: 320px) {
-	#top {
-		background: transparent url(/img/CreativeActionLinksLogo-S.gif) no-repeat top right;
-	}
-
-	#overview {
-		background: none;
-	}
-
-	#overview div.block {
-	  width: auto;
-	}
-
-	#panel div.widgets div.links {
-	  width: 270px;
-	  -webkit-column-count: auto;
-	  -webkit-column-gap: normal;
-	  -moz-column-count: auto;
-	  -moz-column-gap: normal;
-	  -o-column-count: auto;
-	  -o-column-gap: normal;
-	  column-count: auto;
-	  column-gap: normal;
-	}
-}
-
-/* iPads (portrait and landscape) ----------- */
-@media only screen
-and (min-device-width : 768px)
-and (max-device-width : 1024px) {
-/* Styles */
-}
-
-/* iPads (landscape) ----------- */
-@media only screen
-and (min-width : 768px)
-and (max-width : 1120px) {
-  #main {
-    width: 960px;
-  }
-  #panel {
-    width: 960px;
-  }
-  #framafoot {
-    width: 960px;
-  }
-  div.grid div.grid-s {
-    float: right;
-  }
-}
-
-/* iPads (portrait) ----------- */
-@media only screen
-and (max-width : 1000px), (min-device-width:768px) and (max-device-width:1024px) and (orientation:portrait) {
-  #top {
-    b-ackground-size: 145px;
-    p-adding-left: 10px;
-  }
-  #main {
-    w-idth: 700px;
-  }
-  #panel {
-    w-idth: 700px;
-  }
-  #framafoot {
-    w-idth: 700px;
-  }
-  .introTxt li {
-    display: block;
-  }
-  .separator {
-    display: block;
-  }
-}
-
-
 /* Desktops and laptops ----------- */
-@media only screen
-and (min-width : 1224px) {
+@media only screen and (min-width: 769px), only screen and (min-device-width: 769px) {
   #top {
     width: 940px;
   }
@@ -1682,11 +1442,293 @@ and (min-width : 1224px) {
   }
 }
 
-/* Large screens ----------- */
+/* iPads (portrait) ----------- */
+@media only screen and (max-width: 768px), only screen and (max-device-width: 768px) {
+  #top, #main, #panel, #framafoot, #panel div.widgets {
+    width: 700px;
+  }
+  #nav {
+    margin-top: 14px;
+  }
+  #top {
+    background-size: 142px;
+  }
+  #meta {
+    padding-left: 15px;
+    top: initial;
+    float: none;
+  }
+  #meta.grid-s {
+    margin-bottom: 90px;
+  }
+  #meta div.last-update {
+    display: none;
+  }
+  #extra {
+    top: initial;
+    float: none;
+    width: 100%;
+  }
+  #extra div {
+    width: 290px;
+    display: inline-block;
+    vertical-align: top;
+  }
+  #extra div:nth-child(even) {
+    margin-left: 80px;
+  }
+  .introTxt {
+    width: 540px;
+  }
+  .separator {
+    display: initial;
+  }
+}
+
+/* Smartphones (portrait and landscape) -----------
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+}
+*/
+
+/* Smartphones (landscape) ----------- */
+@media only screen and (max-width: 533px), only screen and (max-device-width: 533px) {
+  #top, #main, #panel, #framafoot, #panel div.widgets {
+    width: 495px;
+  }
+
+  #top {
+    background: transparent url(/img/CreativeActionLinksLogo-M.gif) no-repeat top right;
+    background-size: initial;
+    padding-left: 5px;
+    height: auto;
+  }
+
+  #titre-blog {
+    font-size: 36px;
+    font-family: sans-serif;
+    text-shadow: black 1px 1px 0px;
+    padding-top: 15px;
+  }
+
+  .introTxt {
+     font-size: 12px;
+     font-family: Verdana,sans-serif;
+     width: 350px;
+  }
+
+  #nav {
+    margin-top: 5px;
+  }
+
+  #nav li {
+    padding: 0;
+  }
+
+  #main {
+    width: 100%;
+  }
+
+  #content {
+    padding-top: 10px;
+    padding-left: 0;
+  }
+
+  #lead.home-lead {
+    width: 100%;
+    margin-left: 9px;
+  }
+
+  #lead.home-lead img.front {
+    display: none;
+  }
+
+  #lead.home-lead div.block {
+    padding: 10px 20px 10px 10px;
+  }
+
+  div.grid div.grid-l {
+    width: 100%;
+    float: left;
+    margin-left: 10px;
+  }
+
+  body.dc-post #lead h2 {
+    font-size: 22px;
+    margin-left: 15px;
+  }
+
+  #overview {
+    width: 100%;
+    margin-left: 0;
+    background-position-x: 215px;
+  }
+
+  #overview div.block {
+    width: 195px;
+  }
+
+  #overview p.category-title {
+    display: none;
+  }
+
+  #panel div.widgets div.links {
+    width: 420px;
+    -webkit-column-count: 2;
+    -webkit-column-gap: 50px;
+    -moz-column-count: 2;
+    -moz-column-gap: 50px;
+    -o-column-count: 2;
+    -o-column-gap: 50px;
+    column-count: 2;
+    column-gap: 50px;
+    height: auto;
+    margin: 0;
+    padding-left: 8px;
+  }
+
+  #panel {
+    width: 100%;
+  }
+
+  #panel div.widgets {
+    width: 100%;
+    margin: 0;
+  }
+
+  div.widgets ul {
+    margin-left: 5px;
+  }
+
+  #meta {
+    padding-left: 15px;
+  }
+
+  #meta div.last-update {
+    display: none;
+  }
+
+  #extra {
+    margin-left: 10px;
+  }
+
+  #extra div {
+    width: 180px;
+  }
+
+  div.grid div.grid-s {
+    width: 100%;
+  }
+
+  #footer {
+    width: 100%;
+    text-align: inherit;
+  }
+
+  #footer p {
+    margin-left: 5px;
+  }
+
+  div.post.post-excerpt {
+    margin-left: 10px;
+    width: auto;
+  }
+
+  div.post {
+    margin-left: 10px;
+    width: auto;
+  }
+
+  div.post p {
+    margin: 0;
+    width: auto;
+  }
+
+  h2.post-title, #lead h2 {
+    margin-left: 10px;
+  }
+
+  #nav li.nav-active {
+    background: none;
+    border-bottom: solid 1px #DF2FDF;
+  }
+}
+
+@media only screen and (max-width: 480px), only screen and (max-device-width: 480px) {
+  #top, #main, #panel, #framafoot, #panel div.widgets {
+    width: 475px;
+  }
+}
+
+/* Smartphones (portrait) ----------- only need to diff compared to max 480px */
+@media only screen and (max-width: 320px), only screen and (max-device-width: 320px) {
+  #top, #main, #panel, #framafoot, #panel div.widgets {
+    width: 275px;
+  }
+
+  #top {
+    background: transparent url(/img/CreativeActionLinksLogo-S.gif) no-repeat top right;
+    background-size: initial;
+  }
+
+  #overview {
+    background: none;
+  }
+
+  #overview div.block {
+    width: auto;
+  }
+
+  #panel div.widgets div.links {
+    width: 270px;
+    -webkit-column-count: auto;
+    -webkit-column-gap: normal;
+    -moz-column-count: auto;
+    -moz-column-gap: normal;
+    -o-column-count: auto;
+    -o-column-gap: normal;
+    column-count: auto;
+    column-gap: normal;
+  }
+
+  .introTxt {
+    width: 250px;
+    margin-top: 16px;
+  }
+
+  div.grid div.grid-l {
+    width: 100%;
+    float: left;
+  }
+
+  #extra div:nth-child(even) {
+    margin-left: 50px;
+  }
+
+}
+
+/* iPads (portrait and landscape) ----------- */
 @media only screen
-and (min-width : 1824px) {
+and (min-device-width : 768px)
+and (max-device-width : 1024px) {
 /* Styles */
 }
+
+/* iPads (landscape) ----------- */
+@media only screen and (min-width : 769px) and (max-width : 1120px) {
+  #main {
+    width: 960px;
+  }
+  #panel {
+    width: 960px;
+  }
+  #framafoot {
+    width: 960px;
+  }
+  div.grid div.grid-s {
+    float: right;
+  }
+}
+
 
 /* iPhone 4 ----------- */
 @media
