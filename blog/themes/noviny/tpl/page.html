@@ -68,28 +68,6 @@
     <div id="p{{tpl:EntryID}}" class="grid">
       <div id="lead" class="grid-l"><h2 class="post-title">{{tpl:EntryTitle encode_html="1"}}</h2></div>
 
-
-      <!-- # meta -->
-      <div id="meta" class="grid-s">
-        <p class="post-date"><span class="post-date">
-          <span class="date-d">{{tpl:EntryDate format="%e"}}</span>
-          <span class="date-m">{{tpl:EntryDate format="%b"}}</span>
-          <span class="date-y">{{tpl:EntryDate format="%Y"}}</span>
-          <span class="date-h"><a href="{{tpl:EntryURL}}" title="{{tpl:lang Permalink}}">{{tpl:EntryDate format="%H:%M"}}</a></span>
-        </span></p>
-
-        <p class="post-author">{{tpl:lang By}} <strong>{{tpl:EntryAuthorLink}}</strong></p>
-
-        <tpl:EntryIf operator="or" comments_active="1" pings_active="1">
-          <ul class="syndicate">
-            <li><a class="feed" href="{{tpl:BlogFeedURL type="atom"}}/comments/{{tpl:EntryID}}"
-            title="{{tpl:lang This page's comments Atom feed}}">{{tpl:lang This page's comments feed}}</a></li>
-          </ul>
-        </tpl:EntryIf>
-
-        {{tpl:include src="inc_meta.html"}}
-      </div>
-
       <!-- # Entry content -->
       <div class="grid-l">
         <div id="picasaAlbum" style="display:none;"><div id="picasaHeader" class="heading">&nbsp;</div></div>
@@ -254,6 +232,27 @@
           <p id="ping-url">{{tpl:lang Trackback URL}}&nbsp;: {{tpl:EntryPingLink}}</p>
         </tpl:EntryIf>
 
+      </div>
+
+      <!-- # meta -->
+      <div id="meta" class="grid-s">
+        <p class="post-date"><span class="post-date">
+          <span class="date-d">{{tpl:EntryDate format="%e"}}</span>
+          <span class="date-m">{{tpl:EntryDate format="%b"}}</span>
+          <span class="date-y">{{tpl:EntryDate format="%Y"}}</span>
+          <span class="date-h"><a href="{{tpl:EntryURL}}" title="{{tpl:lang Permalink}}">{{tpl:EntryDate format="%H:%M"}}</a></span>
+        </span></p>
+
+        <p class="post-author">{{tpl:lang By}} <strong>{{tpl:EntryAuthorLink}}</strong></p>
+
+        <tpl:EntryIf operator="or" comments_active="1" pings_active="1">
+          <ul class="syndicate">
+            <li><a class="feed" href="{{tpl:BlogFeedURL type="atom"}}/comments/{{tpl:EntryID}}"
+            title="{{tpl:lang This page's comments Atom feed}}">{{tpl:lang This page's comments feed}}</a></li>
+          </ul>
+        </tpl:EntryIf>
+
+        {{tpl:include src="inc_meta.html"}}
       </div>
 
       <!-- # extra -->

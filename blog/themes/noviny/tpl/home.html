@@ -103,34 +103,34 @@
       <!-- # All other categories -->
       <div id="overview" class="grid-l">
         <tpl:Entries no_context="1" lastn="0"><tpl:EntryIf on_home_page="1"><div class="block">
-	          <div>
-	            {{tpl:EntryFirstImage size="sq" class="front" with_category="1"}}
-	            <p class="category-title">
-	            	<tpl:EntryIf is_new="1">
-	            		<div class="newNews">New!</div> &nbsp;
-	              </tpl:EntryIf>
-	            	<a href="{{tpl:EntryCategoryURL}}">{{tpl:EntryCategory encode_html="1"}}</a>
-	           	</p>
-	            <h2 class="post-title"><a href="{{tpl:EntryURL}}">{{tpl:EntryTitle encode_html="1"}}</a></h2>
-	              <!-- # Entry with an excerpt -->
-	              <tpl:EntryIf extended="1">
-	                <div class="b post-content">{{tpl:EntryExcerpt}}</div>
-	              </tpl:EntryIf>
-	              <!-- # Entry without excerpt -->
-	              <tpl:EntryIf extended="0">
-	                <div class="b post-content"><p>{{tpl:EntryContent encode_html="1" remove_html="1" cut_string="250"}}</p></div>
-	              </tpl:EntryIf>
-	              <p class="read-it"><a href="{{tpl:EntryURL}}" title="{{tpl:lang Continue reading}} {{tpl:EntryTitle encode_html="1"}}">{{tpl:lang Continue reading}}</a>
-	                <tpl:EntryIf operator="or" show_comments="1" show_pings="1">
-	                <span class="comment-count"><span> | {{tpl:lang Comments:}}</span>
-	                  <a href="{{tpl:EntryURL}}#comments" title="{{tpl:EntryCommentCount count_all="1"}}">{{tpl:EntryCommentCount count_all="1" none="%s" one="%s" more="%s"}}</a></span>
-	                </tpl:EntryIf>
-	              </p>
-	          </div>
-	        </div></tpl:EntryIf></tpl:Entries>
+            <div>
+              {{tpl:EntryFirstImage size="sq" class="front" with_category="1"}}
+              <p class="category-title">
+                <tpl:EntryIf is_new="1">
+                  <div class="newNews">New!</div> &nbsp;
+                </tpl:EntryIf>
+                <a href="{{tpl:EntryCategoryURL}}">{{tpl:EntryCategory encode_html="1"}}</a>
+              </p>
+              <h2 class="post-title"><a href="{{tpl:EntryURL}}">{{tpl:EntryTitle encode_html="1"}}</a></h2>
+                <!-- # Entry with an excerpt -->
+                <tpl:EntryIf extended="1">
+                  <div class="b post-content">{{tpl:EntryExcerpt}}</div>
+                </tpl:EntryIf>
+                <!-- # Entry without excerpt -->
+                <tpl:EntryIf extended="0">
+                  <div class="b post-content"><p>{{tpl:EntryContent encode_html="1" remove_html="1" cut_string="250"}}</p></div>
+                </tpl:EntryIf>
+                <p class="read-it"><a href="{{tpl:EntryURL}}" title="{{tpl:lang Continue reading}} {{tpl:EntryTitle encode_html="1"}}">{{tpl:lang Continue reading}}</a>
+                  <tpl:EntryIf operator="or" show_comments="1" show_pings="1">
+                  <span class="comment-count"><span> | {{tpl:lang Comments:}}</span>
+                    <a href="{{tpl:EntryURL}}#comments" title="{{tpl:EntryCommentCount count_all="1"}}">{{tpl:EntryCommentCount count_all="1" none="%s" one="%s" more="%s"}}</a></span>
+                  </tpl:EntryIf>
+                </p>
+            </div>
+          </div></tpl:EntryIf></tpl:Entries>
       </div>
 
-			<div class="grid-l separator"></div>
+      <div class="grid-l separator"></div>
 
       <!-- # meta -->
       <div id="meta" class="grid-s">
@@ -138,12 +138,12 @@
           <div class="last-update">{{tpl:lang Last update:}} <strong>{{tpl:EntryDate}}</strong></div>
         </tpl:Entries>
         <div>
-	        <div class="social"><div class="g-plusone" data-size="tall"></div></div>
-					<div class="social" style="top:1px;" id="linkedinShare">
-						<script type="IN/Share" data-url="http://www.creativeactionlinks.org/blog/" data-counter="top"></script>
-					</div>
-					<div class="social" style="top:-1px; margin:0px;"><div class="fb-like" data-href="http://www.creativeactionlinks.org/blog/" data-send="false" data-layout="box_count" data-width="31" data-show-faces="false"></div></div>
-				</div>
+          <div class="social"><div class="g-plusone" data-size="tall"></div></div>
+          <div class="social" style="top:1px;" id="linkedinShare">
+            <script type="IN/Share" data-url="http://www.creativeactionlinks.org/blog/" data-counter="top"></script>
+          </div>
+          <div class="social" style="top:-1px; margin:0px;"><div class="fb-like" data-href="http://www.creativeactionlinks.org/blog/" data-send="false" data-layout="box_count" data-width="31" data-show-faces="false"></div></div>
+        </div>
         {{tpl:include src="inc_meta.html"}}
       </div>
 
@@ -163,6 +163,16 @@
 </div> <!-- End #page -->
 
 <script type="text/javascript">
+  function getsize() {
+    var str = ' ' + $(window).width() + ' - ';
+    var elem = document.getElementById('sizer');
+    if (!elem) {
+      $('#footer > p').prepend('<span id="sizer" style="font-size:0.8em">' + str + '</span>');
+    } else {
+      $('#sizer').text(str);
+    }
+  }
+
   $(document).ready(function() {
     if ($.browser.msie) {
       var ver = parseInt($.browser.version, 10);
@@ -177,39 +187,42 @@
         '</div></div>';
       $(msg).insertBefore('#lead');
     }
-  });
-</script>
-<script>
-// google
-window.___gcfg = {lang: 'ja'};
-(function() {
-  var po = document.createElement('script');
-  po.type = 'text/javascript';
-  po.async = true;
-  po.src = 'https://apis.google.com/js/plusone.js';
-  var s = document.getElementsByTagName('script')[0];
-  s.parentNode.insertBefore(po, s);
-})();
-// FB
-(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  //js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
-  js.src = "//connect.facebook.net/ja_JP/all.js#xfbml=1";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));
-// linkedin
-(function() {
-  var po = document.createElement('script');
-  po.type = 'text/javascript';
-  po.async = true;
-  po.src = '//platform.linkedin.com/in.js';
-  //var s = document.getElementById('linkedinShare');
-  var s = document.getElementsByTagName('body')[0];
-  s.parentNode.appendChild(po);
-})();
 
+    getsize();
+    $(window).resize(function() {
+      getsize();
+    });
+  });
+
+  // google
+  window.___gcfg = {lang: 'ja'};
+  (function() {
+    var po = document.createElement('script');
+    po.type = 'text/javascript';
+    po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(po, s);
+  })();
+  // FB
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    //js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+    js.src = "//connect.facebook.net/ja_JP/all.js#xfbml=1";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+  // linkedin
+  (function() {
+    var po = document.createElement('script');
+    po.type = 'text/javascript';
+    po.async = true;
+    po.src = '//platform.linkedin.com/in.js';
+    //var s = document.getElementById('linkedinShare');
+    var s = document.getElementsByTagName('body')[0];
+    s.parentNode.appendChild(po);
+  })();
 </script>
 </body>
 </html>

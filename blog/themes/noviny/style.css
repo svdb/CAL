@@ -77,6 +77,7 @@ body {
   color: #fff;
   font: 62.5% "Lucida Sans","Lucida Sans Unicode","Lucida Grande",Lucida,Verdana,Arial,sans-serif;
   zoom: 1;
+  overflow-x: hidden;
 }
 a {
   text-decoration: none;
@@ -300,7 +301,7 @@ div.grid div.grid-s {
   padding: 0 0 10px 0;
   background: #3f6d90 url(img/lead-bg.png) no-repeat bottom right;
   color: #fff;
-  width: 700px;
+  width: 100%;
 }
 #lead.home-lead div.block {
   padding: 10px 20px 10px 240px;
@@ -1451,7 +1452,7 @@ a.jScrollActiveArrowButton, a.jScrollActiveArrowButton:hover {
     margin-top: 14px;
   }
   #top {
-    background-size: 142px;
+    background: transparent url(/img/CreativeActionLinksLogo-L.gif) no-repeat top right
   }
   #meta {
     padding-left: 15px;
@@ -1489,6 +1490,56 @@ a.jScrollActiveArrowButton, a.jScrollActiveArrowButton:hover {
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
 }
 */
+
+@media only screen and (max-width: 640px), only screen and (max-device-width: 640px) {
+  #top, #nav, #main, #panel, #framafoot, #panel div.widgets, #overview {
+    width: 630px;
+  }
+
+  #top {
+    height: auto;
+  }
+
+  #nav {
+    width: 475px;
+  }
+
+  #lead.home-lead {
+    w-idth: 100%;
+  }
+
+  .introTxt {
+    width: 460px;
+  }
+
+  #overview {
+    background: transparent url(img/overview-bg-310.png) repeat-y top right;
+    background-position-x: 310px;
+  }
+
+  #overview div.block {
+    width: 290px;
+  }
+
+  #panel div.widgets div.links {
+    width: 620px;
+    -webkit-column-count: 3;
+    -webkit-column-gap: 50px;
+    -moz-column-count: 3;
+    -moz-column-gap: 50px;
+    -o-column-count: 3;
+    -o-column-gap: 50px;
+    column-count: 3;
+    column-gap: 50px;
+    height: auto;
+    margin: 0;
+    padding-left: 8px;
+  }
+
+  #extra div {
+    width: 250px;
+  }
+}
 
 /* Smartphones (landscape) ----------- */
 @media only screen and (max-width: 533px), only screen and (max-device-width: 533px) {
@@ -1534,7 +1585,6 @@ a.jScrollActiveArrowButton, a.jScrollActiveArrowButton:hover {
   }
 
   #lead.home-lead {
-    width: 100%;
     margin-left: 9px;
   }
 
@@ -1655,19 +1705,23 @@ a.jScrollActiveArrowButton, a.jScrollActiveArrowButton:hover {
 
 @media only screen and (max-width: 480px), only screen and (max-device-width: 480px) {
   #top, #main, #panel, #framafoot, #panel div.widgets {
-    width: 475px;
+    width: 100%;
   }
 }
 
 /* Smartphones (portrait) ----------- only need to diff compared to max 480px */
 @media only screen and (max-width: 320px), only screen and (max-device-width: 320px) {
   #top, #main, #panel, #framafoot, #panel div.widgets {
-    width: 275px;
+    width: 100%;
   }
 
   #top {
     background: transparent url(/img/CreativeActionLinksLogo-S.gif) no-repeat top right;
     background-size: initial;
+  }
+
+  #nav {
+    width: 100%;
   }
 
   #overview {
